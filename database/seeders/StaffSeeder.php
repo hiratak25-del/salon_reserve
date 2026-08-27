@@ -26,7 +26,7 @@ class StaffSeeder extends Seeder
         Staff::create([
             'name' => '鈴木 三郎',
             'email' => 'suzuki@example.com',
-            'description' => '丁寧なカットを心がけています。',
+            'description' => '丁寧なカウンセリングを心がけています。',
         ]);
     }
 }
