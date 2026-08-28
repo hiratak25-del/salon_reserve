@@ -16,6 +16,15 @@ Route::get('/staff',[StaffController::class,'index'])
 Route::get('/reservation',[ReservationController::class,'index'])
 ->name('reservation.index');
 
+Route::get('/reservation/create',[ReservationController::class,'create'])
+->name('reservation.creaate');
+
+Route::get('/reservation/create',[ReservationController::class,'create'])
+->name('reservation.create');
+
+Route::post('/reservation',[ReservationController::class,'store'])
+->name('reservation.store');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
