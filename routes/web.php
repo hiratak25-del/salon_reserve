@@ -7,7 +7,7 @@ use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('reservation.index');
 });
 
 Route::get('/staff',[StaffController::class,'index'])
