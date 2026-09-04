@@ -1,5 +1,8 @@
+<h1>あなたの予約一覧</h1>
 @foreach ($reservations as $reservation)
-    <p>あなたの名前：{{ $reservation->staff->name }}
+    <p>
+        あなたの名前：{{ $reservation->user->name }}
+        担当スタッフ：{{ $reservation->staff->name }}
         メニュー：{{ $reservation->menu->name }}
         料金：{{ $reservation->menu->price }}
         予約日：{{ $reservation->reservation_date }}
@@ -9,11 +12,4 @@
     </p>
 @endforeach
 
-
-<form method="POST" action="{{ route('logout') }}">
-    @csrf
-
-    <button type="submit" class="bg-red-400 text-white px-4 py-2 rounded-lg hover:bg-red-500">
-        ログアウト
-    </button>
-</form>
+<a href="{{ route('user.dashboard') }}">ダッシュボードに戻る</a>

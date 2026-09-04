@@ -1,9 +1,7 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<h1>ユーザーダッシュボード</h1>
+
+
+<a href="{{ route('user.index') }}">予約一覧を見る</a>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -14,7 +12,7 @@
             </div>
         </div>
     </div>
-    <form method="POST" action="{{ route('logout') }}">
+<form method="POST" action="{{ route('logout') }}">
     @csrf
 
     <button
@@ -24,4 +22,3 @@
         ログアウト
     </button>
 </form>
-</x-app-layout>

@@ -12,3 +12,5 @@
         施術時間：{{ $reservation->menu->duration }}
     </p>
 @endforeach
+
+<a href="{{ route('user.dashboard') }}">あなたの予約を確認する</a>
